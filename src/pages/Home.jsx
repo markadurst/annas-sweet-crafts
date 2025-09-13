@@ -45,7 +45,7 @@ const Home = () => {
           {/* Large Logo */}
           <div style={{ marginBottom: '2rem' }}>
             <img 
-              src="/images/logo.jpg" 
+              src="./images/logo.jpg" 
               alt="Anna's Sweet Crafts Logo" 
               style={{
                 width: '150px',
