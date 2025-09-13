@@ -3,7 +3,7 @@ export const products = [
     id: 1,
     name: "🌈 Rainbow Friendship Bracelet",
     price: 8.99,
-    image: "./images/27b1568a3556a57c8aee9cc5f8fd63db.jpeg",
+    image: "https://markadurst.github.io/annas-sweet-crafts/images/27b1568a3556a57c8aee9cc5f8fd63db.jpeg",
     description: "A beautiful handmade bracelet with rainbow colors that brings joy and friendship! Made with love and care.",
     category: "jewelry",
     inStock: true,

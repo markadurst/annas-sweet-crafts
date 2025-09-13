@@ -34,7 +34,7 @@ const Header = () => {
               color: '#ff6b9d'
             }}>
               <img 
-                src="./images/logo.jpg" 
+                src="https://markadurst.github.io/annas-sweet-crafts/images/logo.jpg" 
                 alt="Anna's Sweet Crafts Logo" 
                 style={{
                   width: '80px',
