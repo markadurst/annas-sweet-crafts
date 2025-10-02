@@ -94,6 +94,17 @@ const Cart = () => {
                       color: '#333'
                     }}>
                       {item.name}
+                      {item.selectedDesign && (
+                        <span style={{
+                          fontSize: '0.9rem',
+                          color: '#666',
+                          fontWeight: 'normal',
+                          display: 'block',
+                          marginTop: '0.25rem'
+                        }}>
+                          Design: {item.selectedDesign}
+                        </span>
+                      )}
                     </h3>
                     <p style={{
                       fontSize: '1.2rem',

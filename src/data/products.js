@@ -78,6 +78,24 @@ export const products = [
     category: "jewelry",
     inStock: true,
     featured: false
+  },
+  {
+    id: 9,
+    name: "🍳 Pot Holders",
+    price: 12.99,
+    image: "https://markadurst.github.io/annas-sweet-crafts/images/potHolders.jpg",
+    description: "Beautiful handmade pot holders to keep your hands safe while cooking! Available in multiple cute designs.",
+    category: "kitchen",
+    inStock: true,
+    featured: false,
+    designs: [
+      "🌈 Rainbow Stripes",
+      "🌸 Floral Pattern", 
+      "🦋 Butterfly Garden",
+      "⭐ Starry Night",
+      "🌺 Tropical Paradise",
+      "💖 Pink Hearts"
+    ]
   }
 ]
 

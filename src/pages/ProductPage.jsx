@@ -9,6 +9,7 @@ const ProductPage = () => {
   const navigate = useNavigate()
   const { addToCart } = useCart()
   const [quantity, setQuantity] = useState(1)
+  const [selectedDesign, setSelectedDesign] = useState('')
   
   const product = getProductById(id)
 
@@ -25,9 +26,14 @@ const ProductPage = () => {
 
   const handleAddToCart = () => {
     for (let i = 0; i < quantity; i++) {
-      addToCart(product)
+      const productToAdd = {
+        ...product,
+        selectedDesign: selectedDesign || null
+      }
+      addToCart(productToAdd)
     }
     setQuantity(1)
+    setSelectedDesign('')
   }
 
   return (
@@ -176,6 +182,34 @@ const ProductPage = () => {
                   </button>
                 </div>
               </div>
+
+              {/* Design Selector (for products with designs) */}
+              {product.designs && (
+                <div style={{ marginBottom: '2rem' }}>
+                  <label style={{
+                    display: 'block',
+                    fontSize: '1.1rem',
+                    fontWeight: 'bold',
+                    marginBottom: '0.5rem',
+                    color: '#333'
+                  }}>
+                    Choose Design:
+                  </label>
+                  <select
+                    value={selectedDesign}
+                    onChange={(e) => setSelectedDesign(e.target.value)}
+                    className="input"
+                    style={{ width: '100%' }}
+                  >
+                    <option value="">Select a design...</option>
+                    {product.designs.map((design, index) => (
+                      <option key={index} value={design}>
+                        {design}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              )}
 
               {/* Add to Cart Button */}
               <button
